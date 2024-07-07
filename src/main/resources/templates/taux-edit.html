@@ -1,0 +1,38 @@
+<html
+        xmlns:th="http://thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<head>
+    <title>Taux edit</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+
+<body>
+<main>
+    <section layout:fragment="body">
+        <div>
+            <form  class="max-w-sm mx-auto mt-32" role="form" method="post" th:action="@{/taux/{idtaux}/edit(idtaux=${taux.idtaux})}" th:object="${taux}">
+                <div class="max-w-lg mb-6">
+                    <p class="text-gray-800 text-xl">
+                        Veuillez remplir les champs :
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <label for="montant1" class="block mb-2 text-sm font-medium text-gray-900">Montant1</label>
+                    <input type="number" id="montant1" name="montant1" th:field="*{montant1}" class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+                </div>
+                <div class="mb-5">
+                    <label for="montant2" class="block mb-2 text-sm font-medium text-gray-900">Montant2</label>
+                    <input type="number" id="montant2" name="montant2" th:field="*{montant2}" class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+                </div>
+                <div class="mb-5">
+                    <label for="devise" class="block mb-2 text-sm font-medium text-gray-900">Devise</label>
+                    <input type="text" id="devise" name="devise" th:field="*{devise}" class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+                </div>
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ajouter</button>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

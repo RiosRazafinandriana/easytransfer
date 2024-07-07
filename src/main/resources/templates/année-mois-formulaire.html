@@ -1,0 +1,24 @@
+<html
+        xmlns:th="http://thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<head>
+    <title>Formulaire année-mois</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+
+<body>
+<main>
+    <section layout:fragment="body">
+        <div>
+            <form th:action="@{/generatePDF}" method="post" class="mt-32">
+                <input type="hidden" name="numtel" th:value="${numtel}">
+                <label for="anneeMois">Tapez mois puis année, ex: 7 pour juillet et 2024</label>
+                <input type="month" id="anneeMois" name="anneeMois" required>
+                <button type="submit">Générer PDF</button>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

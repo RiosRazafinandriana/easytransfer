@@ -1,0 +1,39 @@
+<html
+        xmlns:th="http://thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout}">
+<head>
+    <title>Client edit</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+
+<body>
+<main>
+    <section layout:fragment="body">
+        <div>
+            <form  class="max-w-sm mx-auto mt-32" role="form" method="post" th:action="@{/envoyers/{idEnv}/edit(idEnv=${envoyer.idEnv})}" th:object="${envoyer}">
+                <div class="max-w-lg mb-6">
+                    <p class="text-gray-800 text-xl">
+                        Veuillez remplir les champs :
+                    </p>
+                </div>
+                <input th:field="*{idEnv}" class="hidden"/>
+                <input th:field="*{date}" class="hidden"/>
+                <div class="mb-5 hidden">
+                    <label for="montant" class="block mb-2 text-sm font-medium text-gray-900">Montant</label>
+                    <input type="text" id="montant" name="montant" th:field="*{montant}" class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+                </div>
+                <div class="mb-5">
+                    <label for="raison" class="block mb-2 text-sm font-medium text-gray-900">Raison</label>
+                    <input type="text" id="raison" name="raison" th:field="*{raison}" class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
+                </div>
+                <input th:field="*{numEnvoyeur}" class="hidden"/>
+                <input th:field="*{numRecepteur}" class="hidden"/>
+                <input th:field="*{devise}" class="hidden"/>
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Modifier</button>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>
