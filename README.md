@@ -8,7 +8,7 @@ EasyTransfer est une application web Java Spring MVC/Thymeleaf qui permet de gé
 - Validation et sécurisation des transactions  
 - Historique des opérations pour chaque utilisateur  
 **Installation :** cloner le repo (`git clone https://github.com/RiosRazafinandriana/easytransfer.git`),
-  configurer la base MySQL dans `application.properties`,
+  configurer la base PostgreSQL dans `application.properties`,
   lancer avec `mvn spring-boot:run`,
   accéder à l’application sur `http://localhost:8080`  
 **Auteur :** Rios Razafinandriana
