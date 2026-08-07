@@ -1,10 +1,27 @@
+# ==========================================
+# Artifacts de Build Java / Maven / Gradle
+# ==========================================
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ==========================================
+# Node.js / CSS (Tailwind, etc.)
+# ==========================================
+node_modules/
+.npm
+*.log
+
+# ==========================================
+# IDEs & Éditeurs de code
+# ==========================================
+# STS (Spring Tool Suite)
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +30,24 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
+# IntelliJ IDEA
 .idea
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
+
+# ==========================================
+# Fichiers Système & OS
+# ==========================================
+.DS_Store
+Thumbs.db
